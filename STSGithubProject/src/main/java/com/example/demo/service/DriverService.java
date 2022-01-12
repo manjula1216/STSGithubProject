@@ -1,14 +1,14 @@
 package com.example.demo.service;
 
-import java.util.Collection;
+//import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
+//import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
+//import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.demo.entity.DriverEntity;
 import com.example.demo.repository.DriverRepository;
@@ -55,6 +55,7 @@ public class DriverService {
 		 */
 				
 		return driverRepository.findAllDriverQuery(byDate);
+		
 	}
 
 	

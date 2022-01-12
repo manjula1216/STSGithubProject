@@ -35,14 +35,13 @@ public class DriverController {
 		return driverService.getAllDriverDetails();
 	}
 		
-	@GetMapping("testDate")
+	@GetMapping("/drivers/{byDate}")
 	public List<DriverEntity> testDate(
 			@RequestParam("byDate") @DateTimeFormat(pattern = "yyyy-MM-dd") Date byDate) {
 		return driverService.getAllDriverDetailsByDate(byDate);
 		
 		
-		//@RequestParam("localdate") @DateTimeFormat(pattern="yyyy.MM.dd") LocalDate localdate, 
-		//@RequestParam("localdatetime") @DateTimeFormat(pattern="yyyy.MM.dd HH:mm:ss") LocalDateTime localdatetime) {
+		
 }
 }
 	
