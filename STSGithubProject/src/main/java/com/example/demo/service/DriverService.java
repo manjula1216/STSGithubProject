@@ -1,14 +1,13 @@
 package com.example.demo.service;
 
-//import java.util.Collection;
+
 import java.util.Date;
 import java.util.List;
-//import java.util.stream.Collectors;
-
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-//import org.springframework.web.bind.annotation.RequestBody;
+
 
 import com.example.demo.entity.DriverEntity;
 import com.example.demo.repository.DriverRepository;
@@ -44,17 +43,13 @@ public class DriverService {
 
 	public List<DriverEntity> getAllDriverDetailsByDate( Date byDate) {
 		
-		//List<DriverEntity> driverList = null;
-				
-		//driverList = driverList.stream().filter(e -> e.getCreationDate().after(byDate))
-           //     .collect(Collectors.toList());
+		List<DriverEntity> driverList = driverRepository.findAll();
 		
-		/*
-		 * driverList = driverRepository.fin stream().filter(e ->
-		 * e.getCreationDate().after(byDate)) .collect(Collectors.toList());
-		 */
-				
-		return driverRepository.findAllDriverQuery(byDate);
+						
+		driverList = driverList.stream().filter(e -> e.getCreationDate().equals(byDate)).filter(x -> x.getCreationDate().after(byDate))
+				.collect(Collectors.toList());
+						
+		return driverList;
 		
 	}
 

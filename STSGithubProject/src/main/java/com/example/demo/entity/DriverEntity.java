@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 
-//import java.util.Calendar;
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -41,7 +41,7 @@ public class DriverEntity {
 	
 	@Column
 	private String dateofBirth;
-	//private String creationDate;
+	
     
 	
 	public Integer getDriverId() {
