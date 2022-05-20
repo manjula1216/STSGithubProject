@@ -27,7 +27,9 @@ public class DriverController {
 	
 	@PostMapping("/create")
 	public DriverEntity saveDriver(@RequestBody DriverEntity driverEntity) {
+		System.out.println("manjulavenkat222");
 		return driverService.saveDriver(driverEntity);
+		
 	}
 	
 	@GetMapping("/drivers")
@@ -42,7 +44,9 @@ public class DriverController {
 		
 		
 		
+		
 }
+	
 }
 	
 	
