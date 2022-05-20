@@ -27,6 +27,9 @@ public class DriverService {
 		System.out.println(driverEntity.getDateofBirth());
 		System.out.println(driverEntity.getCreationDate());
 		System.out.println("manjulavenkat");
+		System.out.println("manjulavenkat1");
+		System.out.println("manjulavenkat222");
+		
 		
 		
 		return driverRepository.save(driverEntity);
